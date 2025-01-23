@@ -138,12 +138,18 @@ class EditStudentActivity : AppCompatActivity() {
         findViewById<Button>(R.id.updateButton).setOnClickListener {
             student.name = nameInput.text.toString()
             student.id = idInput.text.toString()
-            finish()
+            val intent = Intent(this, MainActivity::class.java)
+            intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP // Ensures MainActivity is brought to the top
+            startActivity(intent)
+            finish() // Closes the current activity
         }
 
         findViewById<Button>(R.id.deleteButton).setOnClickListener {
             StudentDatabase.students.removeAt(studentIndex)
-            finish()
+            val intent = Intent(this, MainActivity::class.java)
+            intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP // Ensures MainActivity is brought to the top
+            startActivity(intent)
+            finish() // Closes the current activity
         }
     }
 }
