@@ -45,6 +45,45 @@ class MainActivity : AppCompatActivity() {
     }
 }
 
+// Activity to add a new student
+class NewStudentActivity : AppCompatActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_new_student)
+
+        findViewById<Button>(R.id.saveButton).setOnClickListener {
+            val name = findViewById<EditText>(R.id.nameInput).text.toString()
+            val id = findViewById<EditText>(R.id.idInput).text.toString()
+            if (name.isNotBlank() && id.isNotBlank()) {
+                StudentDatabase.students.add(Student(name, id, false))
+                finish()
+            }
+        }
+    }
+}
+
+// Activity to display student details
+class StudentDetailsActivity : AppCompatActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_student_details)
+
+        val studentIndex = intent.getIntExtra("studentIndex", -1)
+        val student = StudentDatabase.students[studentIndex]
+
+        findViewById<TextView>(R.id.nameDetail).text = student.name
+        findViewById<TextView>(R.id.idDetail).text = student.id
+        findViewById<ImageView>(R.id.studentImage).setImageResource(R.drawable.student_pic)
+
+        findViewById<Button>(R.id.editButton).setOnClickListener {
+            val intent = Intent(this, EditStudentActivity::class.java)
+            intent.putExtra("studentIndex", studentIndex)
+            startActivity(intent)
+        }
+    }
+}
+
+
 // Adapter for the RecyclerView
 class StudentsAdapter(
     private val students: List<Student>,
