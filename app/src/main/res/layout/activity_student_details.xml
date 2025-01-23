@@ -4,22 +4,36 @@
     android:orientation="vertical"
     android:padding="16dp">
 
-    <TextView
-        android:id="@+id/tvName"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Name: " />
+    <ImageView
+        android:id="@+id/studentImage"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:src="@drawable/student_pic"
+        android:layout_gravity="center" />
 
     <TextView
-        android:id="@+id/tvId"
-        android:layout_width="match_parent"
+        android:id="@+id/nameDetail"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="ID: " />
+        android:text="Student Name"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp" />
+
+    <TextView
+        android:id="@+id/idDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Student ID"
+        android:textSize="16sp"
+        android:layout_gravity="center" />
 
     <Button
-        android:id="@+id/btnEditStudent"
-        android:layout_width="match_parent"
+        android:id="@+id/editButton"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Edit" />
-
+        android:text="Edit"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp" />
 </LinearLayout>

@@ -5,27 +5,36 @@
     android:padding="16dp">
 
     <EditText
-        android:id="@+id/etName"
+        android:id="@+id/editNameInput"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Enter Name" />
+        android:layout_height="48dp"
+        android:hint="Edit Name"
+        android:padding="12dp"
+        android:textSize="16sp" />
 
     <EditText
-        android:id="@+id/etId"
+        android:id="@+id/editIdInput"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Enter ID" />
+        android:layout_height="48dp"
+        android:hint="Edit ID"
+        android:padding="12dp"
+        android:textSize="16sp"
+        android:layout_marginTop="8dp" />
 
     <Button
-        android:id="@+id/btnUpdateStudent"
-        android:layout_width="match_parent"
+        android:id="@+id/updateButton"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Update" />
+        android:text="Update"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="16dp" />
 
     <Button
-        android:id="@+id/btnDeleteStudent"
-        android:layout_width="match_parent"
+        android:id="@+id/deleteButton"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Delete" />
-
+        android:text="Delete"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="8dp"
+        android:textColor="@android:color/holo_red_dark" />
 </LinearLayout>
