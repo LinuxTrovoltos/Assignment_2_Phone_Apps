@@ -1,0 +1,41 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:gravity="center"> <!-- Centers the content vertically and horizontally -->
+
+    <EditText
+        android:id="@+id/editNameInput"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:hint="Edit Name"
+        android:padding="12dp"
+        android:textSize="16sp" />
+
+    <EditText
+        android:id="@+id/editIdInput"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:hint="Edit ID"
+        android:padding="12dp"
+        android:textSize="16sp"
+        android:layout_marginTop="8dp" />
+
+    <Button
+        android:id="@+id/updateButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="16dp"
+        android:text="Update" />
+
+    <Button
+        android:id="@+id/deleteButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="8dp"
+        android:text="Delete"
+        android:textColor="@android:color/holo_red_dark" />
+</LinearLayout>
