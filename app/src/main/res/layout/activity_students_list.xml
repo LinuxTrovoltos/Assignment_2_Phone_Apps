@@ -4,16 +4,24 @@
     android:orientation="vertical"
     android:padding="16dp">
 
+    <!-- Space to push the button lower -->
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="83dp" />
+
+    <!-- Adjust RecyclerView to start lower -->
     <Button
         android:id="@+id/addStudentButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Add Student"
-        android:layout_gravity="center_horizontal" />
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="32dp"
+        android:text="Add Student" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="16dp" />
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:layout_weight="1" />
 </LinearLayout>

@@ -3,7 +3,9 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="16dp">
-
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="83dp" />
     <ImageView
         android:id="@+id/studentImage"
         android:layout_width="120dp"
